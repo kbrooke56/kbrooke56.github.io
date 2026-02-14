@@ -1,0 +1,236 @@
+
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlendForge Appliances</title>
+    <link rel="stylesheet" href="StyleSheet.css"/>
+    <link rel="icon" href="Logo.png">
+</head>
+<body>
+<p> </p>
+    <header class="logo-header">
+	<div class="nav-left">
+		<h5> BlendForge</h5>
+	</div>
+	<div class="nav-center">
+        	<img src="Logo.png" alt="Blendforge" height="54" width="50">
+	</div>
+    </header>
+    <p> </p>
+    <nav class="main-nav">
+        <div class="nav-center">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="GameShopPage2.html" class="dropbtn">About Us</a>
+                <div class="dropdown-content">
+                    <a href="GameShopPage2.html#Overview">Overview</a>
+                    <a href="GameShopPage2.html#About-Us">About Us</a>
+                    <a href="GameShopPage2.html#Our-policies">Our Policies</a>
+		    <a href="News.html">News</a>
+		    <a href="Projects.html">Projects</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="GameStore.html" class="dropbtn">Shop</a>
+                <div class="dropdown-content">
+                    <a href="#New">Whats New</a>
+                    <a href="#Kitchen">Kitchen</a>
+                    <a href="#Laundry">Laundry</a>
+                    <a href="#Beauty">Beauty</a>
+                    <a href="#Tv">TV & Entertainment</a>
+                    <a href="#Garden">Garden</a>
+                    <a href="#Gaming">Gaming</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="CustomerService.html" class="dropbtn">Support</a>
+                <div class="dropdown-content">
+                    <a href="CustomerService.html#faqs">FAQs</a>
+                    <a href="CustomerService.html#Return">Returns</a>
+                    <a href="CustomerService.html#Assistance">Assistance</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="ContactUs.html" class="dropbtn">Contact Us</a>
+                <div class="dropdown-content">
+                    <a href="ContactUs.html#Contact">Contact Us</a>
+                    <a href="ContactUs.html#Support">Enquire</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="Game Shop.html">Account</a>
+            <a href="Cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </nav>
+
+<div id="New">
+<div class="bf-carousel">
+
+    <div class="bf-slides">
+
+        <div class="bf-slide active">
+            <div class="bf-slide-content">
+                <h2>Introducing the Fusion 5000 Range</h2>
+                <p>Next-generation smart kitchen appliances engineered for performance and efficiency.</p>
+                <a href="#fusion" class="bf-shop-btn">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="bf-slide">
+            <div class="bf-slide-content">
+                <h2>Works with Forger Assistant</h2>
+                <p>Control your appliances with BlendForge's custom smart assistant — hands-free cooking.</p>
+                <a href="#fusion" class="bf-shop-btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="bf-slide">
+            <div class="bf-slide-content">
+                <h2>Eco-Manufactured</h2>
+                <p>Made using recycled polymer materials and energy-efficient production.</p>
+                <a href="#fusion" class="bf-shop-btn">Our Sustainability</a>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="bf-prev">&#10094;</button>
+    <button class="bf-next">&#10095;</button>
+
+    <div class="bf-dots">
+        <span class="bf-dot active"></span>
+        <span class="bf-dot"></span>
+        <span class="bf-dot"></span>
+    </div>
+
+</div>
+</div>
+
+
+<section class="store-section" id="Kitchen">
+    <h2>Kitchen Appliances</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card"
+            data-name="Fusion 5000 Smart Blender"
+            data-price="129.99"
+            data-desc="AI speed control, auto-clean mode and Forger voice integration."
+            data-img="blender.png">
+
+            <img src="blender.png">
+            <h3>Fusion 5000 Blender</h3>
+            <p class="price">£129.99</p>
+        </div>
+
+        <div class="product-card"
+            data-name="Fusion 5000 Air Fryer"
+            data-price="159.99"
+            data-desc="Oil-free cooking with automatic temperature control."
+            data-img="airfryer.png">
+
+            <img src="airfryer.png">
+            <h3>Fusion 5000 Air Fryer</h3>
+            <p class="price">£159.99</p>
+        </div>
+
+        <div class="product-card"
+            data-name="Fusion 5000 Coffee Machine"
+            data-price="199.99"
+            data-desc="Smart brew settings and programmable morning routines."
+            data-img="coffee.png">
+
+            <img src="coffee.png">
+            <h3>Fusion 5000 Coffee Machine</h3>
+            <p class="price">£199.99</p>
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+
+<div id="Laundry">
+</div>
+
+<div id="Beauty">
+</div>
+
+<div id="Tv">
+</div>
+
+<div id="Garden">
+</div>
+
+<div id="Gaming">
+</div>
+
+<!-- Chatbot Button -->
+<div id="bf-chatbot-button">💬</div>
+
+<!-- Chatbot Window -->
+<div id="bf-chatbot">
+    <div id="bf-chatbot-header">
+        BlendForge Support
+        <span id="bf-chatbot-close">✕</span>
+    </div>
+
+    <div id="bf-chatbot-messages"></div>
+
+    <div id="bf-chatbot-input-area">
+        <input type="text" id="bf-chatbot-input" placeholder="Ask a question...">
+        <button id="bf-chatbot-send">Send</button>
+    </div>
+</div>
+<script src="chatbot.js"></script>
+
+
+<!-- PRODUCT VIEWER -->
+<div id="product-viewer">
+    <div class="viewer-box">
+
+        <span id="viewer-close">✕</span>
+
+        <img id="viewer-image" src="">
+        <h2 id="viewer-title"></h2>
+        <p id="viewer-description"></p>
+        <h3 id="viewer-price"></h3>
+
+        <button id="add-to-cart">Add To Cart</button>
+
+    </div>
+</div>
+
+<!-- Product Popup -->
+<div id="product-modal">
+    <div class="modal-content">
+        <span id="close-modal">✕</span>
+        <img id="modal-img">
+        <h2 id="modal-name"></h2>
+        <p id="modal-desc"></p>
+        <h3 id="modal-price"></h3>
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+    <footer class="footer-box">
+        <div class="footer-content">
+            <h2>&copy; 2025 BlendForge Appliances</h2>
+            <img src="LogoSmall.png" alt="Blendforge" height="27" width="25">
+        </div>
+    </footer>
+
+<script src="store.js"></script>
+<script src="cart-counter.js"></script>
+<script src="carousel.js"></script>
+</body>
+</html>

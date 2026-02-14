@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlendForge Appliances</title>
+    <link rel="stylesheet" href="StyleSheet.css"/>
+    <link rel="icon" href="Logo.png">
+
+</head>
+<body>
+<p> </p>
+    <header class="logo-header">
+	<div class="nav-left">
+		<h5> BlendForge</h5>
+	</div>
+	<div class="nav-center">
+        	<img src="Logo.png" alt="Blendforge" height="54" width="50">
+	</div>
+    </header>
+    <p> </p>
+    <nav class="main-nav">
+        <div class="nav-center">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="GameShopPage2.html" class="dropbtn">About Us</a>
+                <div class="dropdown-content">
+                    <a href="GameShopPage2.html#Overview">Overview</a>
+                    <a href="GameShopPage2.html#About-Us">About Us</a>
+                    <a href="GameShopPage2.html#Our-policies">Our Policies</a>
+		    <a href="News.html">News</a>
+		    <a href="Projects.html">Projects</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="GameStore.html" class="dropbtn">Shop</a>
+                <div class="dropdown-content">
+                    <a href="GameStore.html#New">Whats New</a>
+                    <a href="GameStore.html#Kitchen">Kitchen</a>
+                    <a href="GameStore.html#Laundry">Laundry</a>
+                    <a href="GameStore.html#Beauty">Beauty</a>
+                    <a href="GameStore.html#Tv">TV & Entertainment</a>
+                    <a href="GameStore.html#Garden">Garden</a>
+                    <a href="GameStore.html#Gaming">Gaming</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="CustomerService.html" class="dropbtn">Support</a>
+                <div class="dropdown-content">
+                    <a href="CustomerService.html#faqs">FAQs</a>
+                    <a href="CustomerService.html#Return">Returns</a>
+                    <a href="CustomerService.html#Assistance">Assistance</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="ContactUs.html" class="dropbtn">Contact Us</a>
+                <div class="dropdown-content">
+                    <a href="#Contact">Contact Us</a>
+                    <a href="#Support">Enquire</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="Game Shop.html">Account</a>
+            <a href="Cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </nav>
+	<p> </p>
+
+
+<div id="Contact">
+<p class="info-header" style = "text-align: center"> Contact Us </p>
+
+<p class="info-body">
+If you need assistance, the BlendForge support team is here to help. 
+You can contact us by completing the enquiry form on this page and a member of our team will respond as soon as possible. 
+
+Customers may also reach us directly by email at 
+<a class="contact-link" href="error.html">support@blendforge.co.uk</a> 
+or by phone on 
+<a class="contact-link" href="error.html">0000 000 0000</a> during business hours. 
+
+For quick questions, our live chat service is also available. Whether you need help with products, orders, repairs, or warranties, we are committed to providing clear and helpful support.
+
+</p>
+</div>
+<p></p>
+
+<div id="Support">
+<p class="info-header"> Help</p>
+<div class="enquiry-form-container">
+    <p>You can contact us by completing the enquiry form on this page and a member of our team will respond as soon as possible.</p>
+    
+    <form id="enquiry-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Type your enquiry here..." rows="6" required></textarea>
+
+        <button type="submit" id="send-btn">Send</button>
+    </form>
+
+    <div id="form-success" style="display:none; color:green; margin-top:10px;">
+        Thank you! Your enquiry has been sent.
+    </div>
+</div>
+
+
+
+<!-- Chatbot Button -->
+<div id="bf-chatbot-button">💬</div>
+
+<!-- Chatbot Window -->
+<div id="bf-chatbot">
+    <div id="bf-chatbot-header">
+        BlendForge Support
+        <span id="bf-chatbot-close">✕</span>
+    </div>
+
+    <div id="bf-chatbot-messages"></div>
+
+    <div id="bf-chatbot-input-area">
+        <input type="text" id="bf-chatbot-input" placeholder="Ask a question...">
+        <button id="bf-chatbot-send">Send</button>
+    </div>
+</div>
+<script src="chatbot.js"></script>
+
+    <footer class="footer-box">
+        <div class="footer-content">
+            <h2>&copy; 2025 BlendForge Appliances</h2>
+            <img src="LogoSmall.png" alt="Blendforge" height="27" width="25">
+        </div>
+    </footer>
+    
+
+<script>
+const form = document.getElementById("enquiry-form");
+const successMsg = document.getElementById("form-success");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault(); // prevent page reload
+
+    // You could add actual form submission here if needed (API or email service)
+    // For coursework, we just simulate sending
+
+    // Show success message
+    successMsg.style.display = "block";
+
+    // Clear form fields
+    form.reset();
+
+    // Hide message after 5 seconds
+    setTimeout(() => {
+        successMsg.style.display = "none";
+    }, 5000);
+});
+</script>
+<script src="cart-counter.js"></script>
+</body>
+</html>

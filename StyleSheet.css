@@ -1,0 +1,1110 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif; /* Applied globally */
+    overflow-x: hidden;
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: clamp(30px, 5vw, 60px); /* Scales text size */
+    margin: 0;
+    color: #1C1C1C;
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(9px, 1vw, 12px);
+    margin: 0;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 0;
+    color: #1C1C1C;
+    text-align: left;
+}
+
+h4 {
+    font-size: clamp(14px, 1.5vw, 15px);
+    margin: 0;
+    color: #1C1C1C;
+    text-align: left;
+}
+
+h5{
+    font-size: clamp(20px, 5vw, 45px); /* Scales text size */
+    margin: 0;
+    color: #1C1C1C;
+    text-align: center;	
+}
+
+.info-header{
+    font-size: clamp(20px, 5vw, 40px); /* Scales text size */
+    margin: 0;
+    color: #1C1C1C;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 30px;	
+}
+
+.info-subheader{
+    font-size: clamp(15px, 5vw, 35px); /* Scales text size */
+    margin: 0;
+    color: #1C1C1C;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 30px;	
+
+}
+
+.info-body{
+    font-size: clamp(15px, 5vw, 30px); /* Scales text size */
+    margin: 0;
+    color: #1C1C1C;
+    text-align: left;
+    padding: 10px 30px;	
+}
+
+.quote {
+    font-size: clamp(20px, 5vw, 40px); /* Scales with viewport */
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Span full width */
+    max-width: 100%; /* Prevent any container from shrinking it */
+    color: #1C1C1C;
+    text-align: center;
+    background-color: rgba(229,229,229,0.5); 
+    padding: 10px;
+    line-height: 1.2;
+    display: block; /* Full-width block element */
+}
+
+
+/* --- Navigation --- */
+.main-nav {
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: center; /* Centers the .nav-center group */
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Needed for absolute positioning of nav-right */
+    min-height: 50px;
+}
+
+/* The container for Home/About/Shop etc */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on tiny screens */
+}
+
+.main-nav a {
+    display: inline-block;
+    color: #F5F5F5;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-nav a:hover, .dropbtn:hover {
+    background-color: #8A8A8A;
+}
+
+/* Pins Account/Cart to the right without disturbing the center */
+.nav-right {
+    position: absolute;
+    right: 20px;
+    display: flex;
+}
+
+/* Pins items to the left */
+.nav-left {
+    position: absolute;
+    left: 20px;
+    display: flex;
+}
+
+/* --- Dropdowns --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    text-align: left;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #F5F5F5;
+    padding: 14px 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #8A8A8A;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Hero Sections (The Box) --- */
+.hero-section, .promo-banner {
+    width: 100%;
+    /* Replaces the fixed 900px height with a scalable viewport height */
+    height: 80vh; 
+    min-height: 500px; 
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px; /* Replaces the <p> spacing */
+    background-color: #F5F5F5;
+}
+
+.hero-bg, .banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-logo {
+    z-index: 0;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 108px;
+    width: 100px;
+}
+
+/* --- Hero Text & Buttons (Restored Styles) --- */
+.hero-text-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 30%; /* Matches your original positioning */
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+}
+
+/* This restores the background color behind "Quality You Know" */
+.hero-text-content h1 {
+    background-color: rgba(229,229,229,0.5); 
+    display: inline-block; /* Wraps background tight to text */
+    padding: 10px;
+    text-align: left;
+}
+
+.hero-text-content h3 {
+    color: #F5F5F5;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Added slight shadow for readability */
+}
+
+.hero-text-content h5 {
+    background-color: rgba(229,229,229,0.5); 
+    display: inline-block; /* Wraps background tight to text */
+    padding: 10px;
+    text-align: left;
+}
+
+
+
+/* Restored Button Styles */
+.custom-button {
+    border: 5px solid #F5F5F5;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #F5F5F5;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(18px, 2vw, 30px); /* Scalable font size */
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-button:hover {
+    background-color: #8A8A8A;
+    border-color: #8A8A8A;
+}
+
+/* --- Banner Specifics --- */
+.banner-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 20%; /* Matches your original TV section */
+    transform: translate(-50%, -50%);
+}
+
+.banner-text h1 {
+    background-color: rgba(229,229,229,0.5);
+    padding: 10px;
+}
+
+.banner-text h3 {
+    color: #F5F5F5;
+    margin-top: 10px;
+}
+
+
+/* --- Section Titles --- */
+.category-section, .discover-section {
+    padding: 20px 50px;
+}
+
+.category-section, .history-section {
+    padding: 20px 50px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-left: 0; /* Aligning left with container padding */
+}
+
+.section-subtitle {
+    font-weight: bold;
+    margin-left: 0;
+}
+
+/* --- Category Grid (Responsive Tiles) --- */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items */
+    gap: 20px;
+    padding: 20px 0;
+    background-color: #F5F5F5;
+}
+
+.category-card {
+    flex: 0 1 400px; /* Base width 400px, but flexible */
+    max-width: 100%;
+    background-color: #E5E5E5;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+/* --- Blur Effect --- */
+.blur-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blur-container img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.blur-container:hover img {
+    filter: blur(5px);
+}
+
+.blur-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F5F5F5;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+.blur-container:hover .blur-text {
+    opacity: 1;
+}
+
+/* --- Large Icon Box --- */
+.large-icon-box {
+    height: 50vh; /* Scalable height */
+    width: 100%;
+    background-color: #E5E5E5; /* Light grey box background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+/* --- Footer --- */
+.footer-box {
+    background-color: #1C1C1C;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+
+
+/* Center text ONLY for this promo banner */
+.promo-center .banner-text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.promo-center .banner-text h3 {
+    text-align: center;
+    background-color: rgba(28,28,28,0.5);
+    color: #F5F5F5;
+}
+
+
+/* HISTORY SECTION ONLY */
+.history-card .blur-container {
+    position: relative;
+}
+
+/* Create bottom blur overlay */
+.history-card .blur-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Move text to bottom */
+.history-card .blur-text {
+    top: auto;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-size: 22px;
+    z-index: 2;
+}
+
+/* Hover effect */
+.history-card:hover .blur-container::after,
+.history-card:hover .blur-text {
+    opacity: 1;
+}
+
+/* Disable pointer cursor since these are not links */
+.history-card {
+    cursor: default;
+}
+
+.history-card .blur-container:hover img {
+    filter: none; /* Prevent the whole image from blurring */
+}
+
+
+
+/* PROJECT PAGE ONLY */
+#Projects .category-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    max-width:1000px;
+    margin:0 auto;
+}
+
+#Projects .project-card{
+    width:100%;
+}
+
+#Projects .blur-container img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+#Projects .project-btn{
+    display:block;
+}
+
+/* expanded panel */
+#Projects .project-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s ease;
+    background:#111;
+    color:white;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+/* when opened */
+#Projects .project-card.active .project-content{
+    max-height:600px;
+    padding:15px;
+}
+
+/* make the open info appear underneath all 3 cards */
+#Projects .project-content{
+    grid-column: span 3;
+}
+
+#Projects .project-large{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:10px auto;
+}
+
+#Projects .project-text{
+    text-align:center;
+    line-height:1.6;
+    font-size:15px;
+}
+
+/* mobile */
+@media (max-width:800px){
+    #Projects .category-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.project-card:hover img {
+    filter: blur(5px);
+}
+
+.project-card:hover .blur-text {
+    opacity: 1;
+}
+
+
+
+
+
+/* ---------- PROJECT POPUP LAYOUT ---------- */
+
+#project-viewer{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#project-viewer.open{
+    display: flex;
+}
+
+.viewer-content{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 30px;
+
+    width: 70%;
+    max-width: 900px;
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* THIS is the important part */
+#viewer-img{
+    width: 320px;          /* image size */
+    max-width: 40%;        /* prevents stretching */
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+#viewer-text{
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+}
+
+
+
+
+
+
+/* stop page scrolling */
+body.no-scroll{
+    overflow: hidden;
+}
+
+/* close button */
+#close-viewer{
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    font-size: 30px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#close-viewer:hover{
+    transform: scale(1.2);
+}
+
+/* make popup able to position button */
+.viewer-content{
+    position: relative;
+}
+
+
+
+/* Make project cards look like the bottom buttons */
+.project-btn {
+    border: 5px solid #F5F5F5;      /* white border */
+    padding: 7.5px 7.5px;              /* space inside the button */
+    background-color: transparent;    /* match other buttons */
+    color: #F5F5F5;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(10px, 2vw, 15px);
+    cursor: pointer;
+    border-radius: 8px;              /* match your bottom buttons */
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.project-btn .blur-text{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(10px, 2vw, 15px);
+}
+
+/* Hover effect */
+.project-btn:hover {
+    background-color: #8A8A8A;
+    border-color: #8A8A8A;
+}
+
+
+/* ===== FAQ SECTION ===== */
+
+.faq-section{
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    font-family: inherit;
+}
+
+.faq-title{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* each dropdown box */
+.faq-item{
+    margin-bottom: 10px;
+}
+
+/* the clickable bar */
+.faq-question{
+    width: 100%;
+    background: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 14px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* hover effect */
+.faq-question:hover{
+    background: #444;
+}
+
+/* arrow icon */
+.faq-arrow{
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+
+/* answer panel */
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    background: #f4f4f4;
+    padding: 0 16px;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+/* open state */
+.faq-item.active .faq-answer{
+    max-height: 200px;
+    padding: 16px;
+}
+
+/* rotate arrow */
+.faq-item.active .faq-arrow{
+    transform: rotate(180deg);
+}
+
+
+
+/* Chatbot Button */
+#bf-chatbot-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1f2a44;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+/* Chat Window */
+#bf-chatbot{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+/* Header */
+#bf-chatbot-header{
+    background: #1f2a44;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+#bf-chatbot-close{
+    float: right;
+    cursor: pointer;
+}
+
+/* Messages */
+#bf-chatbot-messages{
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+/* Input */
+#bf-chatbot-input-area{
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#bf-chatbot-input{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+#bf-chatbot-send{
+    background: #1f2a44;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Message Styles */
+.user-message{
+    text-align: right;
+    margin: 5px 0;
+}
+
+.bot-message{
+    text-align: left;
+    margin: 5px 0;
+}
+
+#bf-chatbot-button {
+    transition: bottom 0.3s ease;
+}
+
+.enquiry-form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.enquiry-form-container p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.enquiry-form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.enquiry-form-container input,
+.enquiry-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.enquiry-form-container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1f2a44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enquiry-form-container button:hover {
+    background-color: #334166;
+}
+
+/* PRODUCT POPUP */
+
+#product-viewer{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.viewer-box{
+    background:white;
+    width:420px;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    position:relative;
+}
+
+#viewer-image{
+    width:220px;
+    height:auto;
+    margin-bottom:10px;
+}
+
+#viewer-close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+#add-to-cart{
+    background:#1f2a44;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    margin-top:10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#add-to-cart:hover{
+    background:#32406b;
+}
+
+/* CART PAGE */
+
+#cart-container{
+    max-width:900px;
+    margin:40px auto;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.cart-item img{
+    width:80px;
+}
+
+.cart-info{
+    flex:1;
+    margin-left:15px;
+}
+
+.remove-btn{
+    background:#c0392b;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+#cart-summary{
+    margin-top:25px;
+    text-align:right;
+}
+
+#checkout-btn{
+    background:#1f2a44;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#clear-cart{
+    margin-left:10px;
+    padding:12px 18px;
+    border-radius:8px;
+    border:none;
+    background:#777;
+    color:white;
+}
+
+/* ===== BlendForge Carousel ===== */
+
+.bf-carousel{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.bf-slides{
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    height: 100%;
+}
+
+.bf-slide{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.bf-slide-content h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.bf-slide-content p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.bf-shop-btn{
+    background: #00c2ff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.bf-shop-btn:hover{
+    background: #009fd1;
+}
+
+/* arrows */
+
+.bf-prev, .bf-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.bf-prev{ left: 10px; }
+.bf-next{ right: 10px; }
+
+/* dots */
+
+.bf-dots{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.bf-dot{
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bf-dot.active{
+    background: white;
+}
+
+store-section{
+    padding: 40px 60px;
+}
+
+.store-section h2{
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.product-card:hover{
+    transform: translateY(-6px);
+}
+
+.product-card img{
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+}
+
+.price{
+    color: #009fd1;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#product-modal{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content{
+    background: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 8% auto;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img{
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+}
+
+#close-modal{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#add-to-cart{
+    background: #00c2ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+

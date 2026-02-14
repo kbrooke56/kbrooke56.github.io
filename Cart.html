@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart - BlendForge</title>
+<link rel="stylesheet" href="StyleSheet.css">
+<link rel="icon" href="Logo.png">
+</head>
+
+<body>
+
+<header class="logo-header">
+    <div class="nav-left">
+        <h5>BlendForge</h5>
+    </div>
+    <div class="nav-center">
+        <img src="Logo.png" height="54" width="50">
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="GameStore.html">Shop</a>
+        <a href="CustomerService.html">Support</a>
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+</nav>
+
+<h1 style="text-align:center; margin-top:30px;">Your Shopping Cart</h1>
+
+<div id="cart-container">
+    <div id="cart-items"></div>
+
+    <div id="cart-summary">
+        <h2>Total: £<span id="cart-total">0.00</span></h2>
+        <button id="checkout-btn">Proceed to Checkout</button>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+</div>
+
+<footer class="footer-box">
+    <div class="footer-content">
+        <h2>&copy; 2025 BlendForge Appliances</h2>
+        <img src="LogoSmall.png" height="27" width="25">
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="cart-counter.js"></script>
+</body>
+</html>
